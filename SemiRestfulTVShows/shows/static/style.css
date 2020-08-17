@@ -1,0 +1,48 @@
+body {
+    background: radial-gradient(#32c318,#189cc3);
+}
+
+h1 {
+    color: rgb(0, 87, 173);
+    margin: 10px, 0px, 25px, 10px;
+}
+
+th, td {
+    color: #00a2ff;
+    
+}
+
+a {
+    text-decoration-line: underline;
+    color: #b700ff;
+}
+
+form {
+    margin: 0 40px;
+}
+
+.alone{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#table{
+    margin: 10px;
+}
+
+.form-group {
+    color: rgb(16, 97, 179);
+}
+
+button {
+    background-color: rgb(5, 113, 255);
+    font-weight: bold;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+

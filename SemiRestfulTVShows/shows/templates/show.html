@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit {{ show.title }}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+    <h1>{{ show.title }}</h1>
+    <a href="/shows" class="alone">Go back</a>
+    </div>
+    <div id="body">
+    <h3>Network: {{ show.network }}</h3>
+    <h3>Release date: {{show.release_date }}</h3>
+    <h4>Descripton: {{ show.description }}</h4>
+    <p>Last updated: {{ show.updated_at }}</p>
+    <a href="{{ show.id }}/delete" class="alone">Delete</a>
+    </div>
+    </div>
+</body>
+</html>
