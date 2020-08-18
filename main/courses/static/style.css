@@ -1,0 +1,33 @@
+body {
+    background: radial-gradient(rgb(3, 77, 175), rgb(3, 163, 163) );
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.form-group {
+    padding-left: 10px;
+    padding-right: 1000px;
+    margin-bottom: 75px;
+}
+
+.form-group label{
+    font-weight: bold;
+    font-size: large;
+
+}
+
+button{
+    float: right;
+    margin-top: 10px;
+    background-color: rgb(20, 224, 65);
+    font-weight: bold;
+}
+
+
+
+
+

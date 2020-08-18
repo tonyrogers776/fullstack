@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <h1>Add a new course</h1>
+    <form action="/create" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            {% if messages %}
+            <ul class="alert-danger w-50">
+                {% for message in messages %}
+                <li class="text-danger text-small">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <input type="text" name="name" id="name" class="form-control">
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" class="form-control" cols="15" rows="5"></textarea>
+            <button>Submit</button>
+        </div>
+    </form>
+    <h1>Courses</h1>
+    <table class = "table table-dark">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Date Added</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.name }}</td>
+                <td>{{ course.description }}</td>
+                <td>{{ course.created_at }}</td>
+                <td><a href="/{{ course.id }}/remove">Remove</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>

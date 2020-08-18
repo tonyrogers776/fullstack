@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove "{{ course.name }}"</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="container mt-3 mx-auto w-50">
+        <h1>Are you sure you want to remove the following course?</h1>
+        <h4>Name: {{ course.name }}</h4>
+        <h4>Description: {{ course.description }}</h4>
+        <form action="/{{ course.id }}/delete" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-sm">Yes, I want to delete this!</button>
+            <a href="/" role="button" class="btn btn-secondary btn-sm">No, go back</a>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
