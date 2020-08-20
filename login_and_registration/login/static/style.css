@@ -1,0 +1,31 @@
+body {
+    background: radial-gradient(rgb(14, 19, 20), rgb(99, 99, 99));
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    color: rgb(0, 110, 255);
+}
+
+label{
+    color: darkcyan;
+    font-weight: bold;
+}
+
+.form-control{
+    margin-bottom: 45px;
+}
+
+#login{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 50px;
+    width: 500px;
+}
+
+#registration{
+    display: inline-block;
+    margin-top: 50px;
+    width: 500px;
+}
